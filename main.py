@@ -32,7 +32,7 @@ from ntptime import settime
 settime()
 ctime=truetime_calc()
 #rtc = RTC()
-# ist von loloris noch zu übernehmen
+# ist von loloris noch zu Ã¼bernehmen
 #rtc.ntp_sync(server='de.pool.ntp.org',tz='CET-1CEST,M3.5.0,M10.5.0/3')
 sta_if = network.WLAN(network.STA_IF)
 ap_if = network.WLAN(network.AP_IF)
@@ -75,9 +75,11 @@ tft.text(font2,'{}'.format(str(os.uname().version).replace('ESP32_','')),0,260, 
 tft.text(font2,'Python  : {}'.format(str(sys.version_info).replace(",",".").replace("(","").replace(")","").replace(" ","")),0,280, ili9342c.WHITE, ili9342c.BLUE)
 tft.text(font2,'CPU frequency : {} Mhz'.format(machine.freq()/1000000),0,280, ili9342c.WHITE, ili9342c.BLUE)
 # clock
+'''
 while True:
     ctime=truetime_calc()
     pt(ctime)
     tft.text(font2,'{:02d}:{:02d}:{:02d}'.format(ctime[3],ctime[4],ctime[5]),0,0, ili9342c.WHITE, ili9342c.BLUE)
     tft.text(font2,'{:02d}.{:02d}.{:04d}'.format(ctime[2],ctime[1],ctime[0]),158,0, ili9342c.WHITE, ili9342c.BLUE)
     time.sleep(1)
+'''
