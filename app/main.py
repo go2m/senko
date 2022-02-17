@@ -83,3 +83,5 @@ while True:
     tft.text(font2,'{:02d}.{:02d}.{:04d}'.format(ctime[2],ctime[1],ctime[0]),158,0, ili9342c.WHITE, ili9342c.BLUE)
     time.sleep(1)
 '''
+tft.text(font2,'Vers.:{}'.format(0.1),100,0, ili9342c.YELLOW, ili9342c.BLUE)
+
